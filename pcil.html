@@ -83,6 +83,18 @@
 </nav> -->
 
 
+
+<head>
+  <!-- Head content, title, and CSS styles -->
+  <style>
+
+
+      .centered-image {
+          max-width: 100%;
+          max-height: 100%;
+      }
+  </style>
+</head>
 <section class="hero">
   <div class="hero-body">
     <div class="container is-max-desktop">
@@ -91,14 +103,14 @@
           <h1 class="title is-1 publication-title">PCIL:Policy Contrastive Imitation Learning</h1>
           <div class="is-size-5 publication-authors">
             <span class="author-block">
-              <a href="">Jialei Huang</a><sup>1</sup>,</span>
+              <a href="https://jialeihuang.github.io">Jialei Huang</a><sup>1</sup>,</span>
             <span class="author-block">
-              <a href="">Zhaoheng Yin </a><sup>4</sup>,</span>
+              <a href="https://zhaohengyin.github.io">Zhaoheng Yin </a><sup>4</sup>,</span>
             <span class="author-block">
-              <a href="">Yingdong Hu</a><sup>1</sup>,
+              <a href="https://yingdong-hu.github.io">Yingdong Hu</a><sup>1</sup>,
             </span>
             <span class="author-block">
-              <a href="">Yang Gao</a><sup>1,2,3</sup>,
+              <a href="http://people.iiis.tsinghua.edu.cn/~gaoyang/yang-gao.weebly.com/index.html">Yang Gao</a><sup>1,2,3</sup>,
             </span>
           </div>
 
@@ -360,14 +372,11 @@
             
           </p>
         </div>
-        <div class="columns is-vcentered interpolation-panel">
-          <div class="column is-3 has-text-centered">
-            <img src="./static/images/teaser_fin.jpg"
-                 class="interpolation-image"
-                 alt="Interpolate start reference image."/>
-            <p>(Left) the distance between 2 expert data points may be even longer than the distance between expert data point and sub-optimal non-expert data point. 
-            </p>
-            <p>(Right) Our proposed PCIL.
+        <div class="content has-text-centered">
+          <div class="centered-image">
+            <img src="./static/images/teaser_fin.jpg"/>
+            <p><strong>(Left)</strong> the distance between 2 expert data points may be even longer than the distance between expert data point and sub-optimal non-expert data point. 
+              <strong>(Right)</strong> Our proposed PCIL.
             </p>
           </div>
           <!-- <div class="column interpolation-video-column">
@@ -401,11 +410,9 @@
               pull the representation of negative samples away from the representation of the anchor state.
           </p>
         </div>
-        <div class="columns is-vcentered interpolation-panel">
-          <div class="column is-3 has-text-centered">
-            <img src="./static/images/method-cropped.jpg"
-                 class="interpolation-image"
-                 alt="Interpolate start reference image."/>
+        <div class="content has-text-centered">
+          <div class="centered-image">
+            <img src="./static/images/method-cropped.jpg"/>
             <p>
               Illustration of our contrastive learning approach.
             </p>
@@ -429,11 +436,9 @@
             Cheetah Run, Finger Spin, Hopper Hop, Hopper Stand, and Quadruped Run. For the remaining tasks,
           </p>
         </div>
-        <div class="columns is-vcentered interpolation-panel">
-          <div class="column is-3 has-text-centered">
-            <img src="./static/images/results.png"
-                 class="interpolation-image"
-                 alt="Interpolate start reference image."/>
+        <div class="content has-text-centered">
+          <div class="centered-image">
+            <img src="./static/images/results.png"/>
             <p>
               Comparisons of algorithms on 6 selected tasks.
             </p>
