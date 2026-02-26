@@ -1,99 +1,158 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>JialeiHuang - Academic Homepage</title>
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            line-height: 1.6;
-            max-width: 800px;
-            margin: 0 auto;
-            padding: 20px;
-        }
-
-        h1 {
-            text-align: center;
-        }
-
-        p {
-            text-align: justify;
-        }
-
-        .contact-info {
-            margin-top: 20px;
-        }
-
-        .contact-info a {
-            margin-right: 10px;
-            color: #007bff;
-            text-decoration: none;
-        }
-        img {
-            display: block;
-            margin: 0 auto;
-            border-radius: 60%; /* Set border-radius to 50% to create a circular shape */
-            max-width: 300px; /* Set an appropriate maximum width for your image */
-            height: auto; /* Allow the height to adjust automatically based on the image's aspect ratio */
-        }
-    </style>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Jialei Huang</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
 </head>
 <body>
-    <h1>Jialei Huang</h1>
-    <html lang="en">
-    <head>
-        <!-- Head content, title, and CSS styles -->
-    </head>
-    <body>
-        <img src="static/images/self.jpg" alt="Your Image">
-        <!-- Add other content as needed -->
-    </body>
-    </html>
-    <p>
-        Welcome to my academic homepage. 
-        I am a second-year Ph.D. student at Institute for Interdisciplinary Information Sciences (IIIS), Tsinghua University, advised by 
-        <a href="http://people.iiis.tsinghua.edu.cn/~gaoyang/yang-gao.weebly.com/index.html">Prof. Yang Gao.</a>
-         
-    </p>
-    <p>
-        Previously, I obtained my bachelor's degree from EECS, Peking University and advised by 
-        <a href="https://zsdonghao.github.io">Prof. Hao Dong.</a>
-    </p>
-    <p>
-        My research interests lie in the intersection between computer vision and robotics.
 
-    <h2>Publications</h2>
-    <ul>
-        <li>
-            <strong>Generative 3D Part Assembly via Dynamic Graph Learning</strong> (NIPS 2020)
-            <br>
-            <a href="https://arxiv.org/abs/2006.07793">Paper Link</a>
-            
-            <a href="https://github.com/hyperplane-lab/Generative-3D-Part-Assembly">Code Link</a>
-        
-            <a href="https://github.com/hyperplane-lab/Generative-3D-Part-Assembly">Project Page</a>
-        </li>
-        <li>
-            <strong>Policy Contrastive Imitation Learning</strong>
-            <br>
-            <a href="https://arxiv.org/abs/2307.02829">Paper Link</a>
-            
-            <a href="https://github.com/JialeiHuang/PCIL">Code Link</a>
-        
-            <a href="https://jialeihuang.github.io/pcil">Project Page</a>
-        </li>
-
-        <!-- Add more publications as needed -->
-    </ul>
-
-
-    <h2>Contact Information</h2>
-    <div class="contact-info">
-        <a href="mailto:huangjl21@mails.tsinghua.edu.cn">Email</a>
-        <a href="https://github.com/JialeiHuang" target="_blank">GitHub</a>
-        <!-- Add more contact information or social media links as needed -->
+  <nav class="nav">
+    <div class="nav-inner">
+      <a href="#" class="nav-name">JH</a>
+      <div class="nav-links">
+        <a href="#about">About</a>
+        <a href="#research">Research</a>
+        <a href="#education">Education</a>
+      </div>
     </div>
+  </nav>
+
+  <main>
+
+    <!-- Hero -->
+    <section class="hero" id="about">
+      <div class="hero-content">
+        <div class="hero-photo">
+          <img src="photo.jpg" alt="Jialei Huang">
+        </div>
+        <div class="hero-text">
+          <h1>Jialei Huang<span class="cursor-blink">_</span></h1>
+          <p class="tagline">Ph.D. Candidate &middot; Tsinghua University, IIIS</p>
+          <p class="bio">
+            I build generalizable and robust <strong>embodied intelligence</strong>. My work spans the full pipeline from perception to physical action&mdash;spatial understanding, feature extraction, control grounding, semantic alignment, and precision execution&mdash;translating theoretical breakthroughs into real-world robotic systems.
+          </p>
+          <p class="bio">
+            Looking forward, my vision is the <strong>physical landing of general-purpose robotics</strong>: mastering the entire end-to-end system pipeline from hardware-software co-integration to high-level reasoning.
+          </p>
+          <div class="hero-links">
+            <a href="https://scholar.google.com/citations?user=QpmcFjoAAAAJ&hl=en" target="_blank" rel="noopener">Google Scholar</a>
+            <a href="mailto:hjl@example.com">Email</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Research -->
+    <section class="section" id="research">
+      <div class="section-header">
+        <span class="section-number">01</span>
+        <h2>Research</h2>
+      </div>
+      <p class="section-intro">
+        My technical philosophy is <em>"Layered Knowledge Scaffolding across the Data Pyramid"</em>&mdash;constructing a unified pipeline through five pillars:
+      </p>
+
+      <div class="research-grid">
+
+        <a href="https://arxiv.org/abs/2510.14647" target="_blank" rel="noopener" class="research-card">
+          <div class="card-meta">
+            <span class="card-tag">ICRA 2025</span>
+            <span class="card-year">2025</span>
+          </div>
+          <h3>SaTA: Spatially-anchored Tactile Awareness for Robust Dexterous Manipulation</h3>
+          <p class="card-pillar">Pillar 5 &mdash; Physical Landing &amp; Execution</p>
+          <p class="card-authors"><strong>Jialei Huang</strong>, et al. &middot; Sharpa &amp; Tsinghua University</p>
+          <p>Led the end-to-end architecture anchoring tactile features to hand kinematics for millimeter-level geometric reasoning. 88.3% success rate vs. 53.3% baseline on extreme-precision tasks.</p>
+        </a>
+
+        <a href="https://arxiv.org/abs/2507.09160" target="_blank" rel="noopener" class="research-card">
+          <div class="card-meta">
+            <span class="card-tag">Preprint</span>
+            <span class="card-year">2024&ndash;25</span>
+          </div>
+          <h3>Tactile-VLA: Unlocking VLA Models' Physical Knowledge for Generalization</h3>
+          <p class="card-pillar">Pillar 4 &mdash; Semantic-Level Alignment</p>
+          <p class="card-authors"><strong>Jialei Huang</strong>, et al. &middot; Tsinghua University</p>
+          <p>Directed a framework grounding internet-scale VLA models through tactile sensing for zero-shot, contact-rich manipulation. Pioneered Tactile Chain-of-Thought reasoning.</p>
+        </a>
+
+        <a href="https://arxiv.org/abs/2509.25747" target="_blank" rel="noopener" class="research-card">
+          <div class="card-meta">
+            <span class="card-tag">ICRA</span>
+            <span class="card-year">2023&ndash;24</span>
+          </div>
+          <h3>BSR: Decoupled Visuomotor Manipulation via Sim-to-Real Transfer</h3>
+          <p class="card-pillar">Pillar 3 &mdash; Control-Level Grounding</p>
+          <p class="card-authors"><strong>Jialei Huang</strong>, et al. &middot; Tsinghua University &amp; UC Berkeley</p>
+          <p>Engineered a decoupled visuomotor pipeline harnessing low-level physics control from scalable simulation data. Achieved zero-shot sim-to-real transfer.</p>
+        </a>
+
+        <a href="https://arxiv.org/abs/2307.02829" target="_blank" rel="noopener" class="research-card">
+          <div class="card-meta">
+            <span class="card-tag">ICML</span>
+            <span class="card-year">2022&ndash;23</span>
+          </div>
+          <h3>Policy Contrastive Imitation Learning (PCIL)</h3>
+          <p class="card-pillar">Pillar 2 &mdash; Feature-Level Extraction</p>
+          <p class="card-authors"><strong>Jialei Huang</strong>, et al. &middot; Tsinghua University &amp; HKUST</p>
+          <p>Solved fundamental bottlenecks in adversarial imitation learning by designing an interpretable contrastive representation space. New SOTA on DeepMind Control suite.</p>
+        </a>
+
+        <a href="https://arxiv.org/abs/2006.07793" target="_blank" rel="noopener" class="research-card">
+          <div class="card-meta">
+            <span class="card-tag">NeurIPS</span>
+            <span class="card-year">2020&ndash;21</span>
+          </div>
+          <h3>Generative 3D Part Assembly via Dynamic Graph Learning</h3>
+          <p class="card-pillar">Pillar 1 &mdash; Spatial Understanding</p>
+          <p class="card-authors"><strong>Jialei Huang</strong>, et al. &middot; Peking University &amp; Stanford University</p>
+          <p>Designed a dynamic graph learning framework for 3D assembly, establishing foundational spatial and geometric reasoning.</p>
+        </a>
+
+      </div>
+    </section>
+
+    <!-- Education -->
+    <section class="section" id="education">
+      <div class="section-header">
+        <span class="section-number">02</span>
+        <h2>Education</h2>
+      </div>
+
+      <div class="edu-list">
+        <div class="edu-item">
+          <div class="edu-period">2021 &mdash; Present</div>
+          <div class="edu-info">
+            <h3>Tsinghua University, IIIS</h3>
+            <p class="edu-degree">Ph.D. Candidate in Computer Science</p>
+            <p>Advised by Prof. Yang Gao. Research focuses on advancing embodied intelligence through deep reinforcement learning, dexterous manipulation, tactile sensing, and sim-to-real transfer.</p>
+          </div>
+        </div>
+
+        <div class="edu-item">
+          <div class="edu-period">2017 &mdash; 2021</div>
+          <div class="edu-info">
+            <h3>Peking University, EECS</h3>
+            <p class="edu-degree">B.Sc. in Computer Science</p>
+            <p>Advised by Prof. Hao Dong. Developed rigorous foundations in machine learning and computer vision.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <footer class="footer">
+    <div class="footer-inner">
+      <span>&copy; 2025 Jialei Huang</span>
+      <span>Built with purpose.</span>
+    </div>
+  </footer>
+
 </body>
 </html>

@@ -1,0 +1,447 @@
+/* ========================================
+   RESET & BASE
+   ======================================== */
+
+*, *::before, *::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --black: #0a0a0a;
+  --white: #fafafa;
+  --gray-100: #f0f0f0;
+  --gray-200: #e0e0e0;
+  --gray-400: #999;
+  --gray-600: #666;
+  --gray-800: #333;
+  --font-sans: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+  --font-mono: 'JetBrains Mono', 'SF Mono', 'Fira Code', monospace;
+  --max-width: 860px;
+  --space-xs: 0.5rem;
+  --space-sm: 1rem;
+  --space-md: 2rem;
+  --space-lg: 4rem;
+  --space-xl: 6rem;
+}
+
+html {
+  font-size: 16px;
+  scroll-behavior: smooth;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+body {
+  font-family: var(--font-sans);
+  color: var(--black);
+  background: var(--white);
+  line-height: 1.7;
+  font-weight: 400;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+strong {
+  font-weight: 600;
+}
+
+em {
+  font-style: italic;
+}
+
+::selection {
+  background: var(--black);
+  color: var(--white);
+}
+
+/* ========================================
+   NAV
+   ======================================== */
+
+.nav {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 100;
+  background: rgba(250, 250, 250, 0.85);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border-bottom: 1px solid var(--gray-200);
+}
+
+.nav-inner {
+  max-width: var(--max-width);
+  margin: 0 auto;
+  padding: 0 var(--space-md);
+  height: 56px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.nav-name {
+  font-family: var(--font-mono);
+  font-weight: 500;
+  font-size: 1.1rem;
+  letter-spacing: -0.02em;
+}
+
+.nav-links {
+  display: flex;
+  gap: var(--space-md);
+}
+
+.nav-links a {
+  font-size: 0.8rem;
+  font-weight: 500;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: var(--gray-600);
+  transition: color 0.2s;
+}
+
+.nav-links a:hover {
+  color: var(--black);
+}
+
+/* ========================================
+   MAIN
+   ======================================== */
+
+main {
+  max-width: var(--max-width);
+  margin: 0 auto;
+  padding: 0 var(--space-md);
+}
+
+/* ========================================
+   HERO
+   ======================================== */
+
+.hero {
+  padding-top: calc(56px + var(--space-xl));
+  padding-bottom: var(--space-xl);
+  border-bottom: 1px solid var(--gray-200);
+}
+
+.hero-content {
+  display: flex;
+  gap: var(--space-lg);
+  align-items: flex-start;
+}
+
+.hero-photo {
+  flex-shrink: 0;
+  width: 160px;
+  height: 160px;
+  overflow: hidden;
+  border: 1px solid var(--gray-200);
+}
+
+.hero-photo img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  filter: grayscale(20%);
+  transition: filter 0.3s;
+}
+
+.hero-photo:hover img {
+  filter: grayscale(0%);
+}
+
+.hero-text {
+  flex: 1;
+  min-width: 0;
+}
+
+.hero h1 {
+  font-size: 2.8rem;
+  font-weight: 700;
+  letter-spacing: -0.04em;
+  line-height: 1.1;
+  margin-bottom: var(--space-xs);
+}
+
+.cursor-blink {
+  font-family: var(--font-mono);
+  font-weight: 300;
+  animation: blink 1s step-end infinite;
+}
+
+@keyframes blink {
+  50% { opacity: 0; }
+}
+
+.tagline {
+  font-family: var(--font-mono);
+  font-size: 0.85rem;
+  color: var(--gray-600);
+  letter-spacing: 0.02em;
+  margin-bottom: var(--space-md);
+}
+
+.bio {
+  font-size: 1rem;
+  line-height: 1.8;
+  color: var(--gray-800);
+  margin-bottom: var(--space-sm);
+}
+
+.hero-links {
+  margin-top: var(--space-md);
+  display: flex;
+  gap: var(--space-sm);
+}
+
+.hero-links a {
+  font-family: var(--font-mono);
+  font-size: 0.8rem;
+  font-weight: 500;
+  padding: 0.5rem 1.2rem;
+  border: 1.5px solid var(--black);
+  transition: all 0.2s;
+}
+
+.hero-links a:hover {
+  background: var(--black);
+  color: var(--white);
+}
+
+/* ========================================
+   SECTIONS
+   ======================================== */
+
+.section {
+  padding: var(--space-xl) 0;
+  border-bottom: 1px solid var(--gray-200);
+}
+
+.section-header {
+  display: flex;
+  align-items: baseline;
+  gap: var(--space-sm);
+  margin-bottom: var(--space-md);
+}
+
+.section-number {
+  font-family: var(--font-mono);
+  font-size: 0.75rem;
+  color: var(--gray-400);
+  letter-spacing: 0.05em;
+}
+
+.section-header h2 {
+  font-size: 1.8rem;
+  font-weight: 700;
+  letter-spacing: -0.03em;
+}
+
+.section-intro {
+  font-size: 1rem;
+  color: var(--gray-600);
+  max-width: 600px;
+  margin-bottom: var(--space-lg);
+  line-height: 1.8;
+}
+
+/* ========================================
+   RESEARCH CARDS
+   ======================================== */
+
+.research-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1px;
+  background: var(--gray-200);
+  border: 1px solid var(--gray-200);
+}
+
+a.research-card {
+  display: block;
+  background: var(--white);
+  padding: var(--space-md);
+  transition: background 0.2s, padding-left 0.2s;
+  cursor: pointer;
+}
+
+a.research-card:hover {
+  background: var(--gray-100);
+  padding-left: calc(var(--space-md) + 0.5rem);
+}
+
+.card-meta {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: var(--space-sm);
+}
+
+.card-tag {
+  font-family: var(--font-mono);
+  font-size: 0.7rem;
+  font-weight: 500;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  padding: 0.2rem 0.6rem;
+  border: 1px solid var(--black);
+}
+
+.card-year {
+  font-family: var(--font-mono);
+  font-size: 0.75rem;
+  color: var(--gray-400);
+}
+
+.research-card h3 {
+  font-size: 1.1rem;
+  font-weight: 600;
+  letter-spacing: -0.02em;
+  line-height: 1.4;
+  margin-bottom: 0.4rem;
+}
+
+.card-pillar {
+  font-family: var(--font-mono);
+  font-size: 0.75rem;
+  color: var(--gray-600);
+  letter-spacing: 0.03em;
+  margin-bottom: var(--space-xs);
+}
+
+.card-authors {
+  font-size: 0.82rem;
+  color: var(--gray-400);
+  margin-bottom: var(--space-xs);
+  padding-bottom: var(--space-xs);
+  border-bottom: 1px solid var(--gray-200);
+}
+
+.research-card > p:last-child {
+  font-size: 0.92rem;
+  color: var(--gray-600);
+  line-height: 1.7;
+}
+
+/* ========================================
+   EDUCATION
+   ======================================== */
+
+.edu-list {
+  display: flex;
+  flex-direction: column;
+}
+
+.edu-item {
+  display: flex;
+  gap: var(--space-md);
+  padding: var(--space-md) 0;
+  border-bottom: 1px solid var(--gray-200);
+}
+
+.edu-item:first-child {
+  border-top: 1px solid var(--gray-200);
+}
+
+.edu-period {
+  font-family: var(--font-mono);
+  font-size: 0.8rem;
+  color: var(--gray-400);
+  min-width: 130px;
+  padding-top: 0.25rem;
+  white-space: nowrap;
+}
+
+.edu-info h3 {
+  font-size: 1.05rem;
+  font-weight: 600;
+  letter-spacing: -0.02em;
+  margin-bottom: 0.2rem;
+}
+
+.edu-degree {
+  font-family: var(--font-mono);
+  font-size: 0.8rem;
+  color: var(--gray-600);
+  margin-bottom: 0.5rem;
+}
+
+.edu-info > p:last-child {
+  font-size: 0.9rem;
+  color: var(--gray-600);
+  line-height: 1.7;
+}
+
+/* ========================================
+   FOOTER
+   ======================================== */
+
+.footer {
+  max-width: var(--max-width);
+  margin: 0 auto;
+  padding: var(--space-md);
+}
+
+.footer-inner {
+  display: flex;
+  justify-content: space-between;
+  font-family: var(--font-mono);
+  font-size: 0.75rem;
+  color: var(--gray-400);
+}
+
+/* ========================================
+   RESPONSIVE
+   ======================================== */
+
+@media (max-width: 640px) {
+  :root {
+    --space-xl: 3.5rem;
+    --space-lg: 2.5rem;
+  }
+
+  .hero-content {
+    flex-direction: column;
+    gap: var(--space-md);
+  }
+
+  .hero-photo {
+    width: 120px;
+    height: 120px;
+  }
+
+  .hero h1 {
+    font-size: 2rem;
+  }
+
+  .nav-links {
+    gap: var(--space-sm);
+  }
+
+  .nav-links a {
+    font-size: 0.7rem;
+  }
+
+  .edu-item {
+    flex-direction: column;
+    gap: 0.25rem;
+  }
+
+  .edu-period {
+    min-width: auto;
+  }
+
+  .hero-links {
+    flex-wrap: wrap;
+  }
+
+  .section-header h2 {
+    font-size: 1.4rem;
+  }
+}
